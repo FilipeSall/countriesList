@@ -9,6 +9,13 @@ This is a full-stack project with **Next.js** on the front-end and a back-end bu
 
 There is no need to set up a `.env` file, as all routes and configurations are already defined.
 
+### Pre-installation
+
+Before installing the dependencies, make sure to run the following command to install the necessary dependencies:
+
+```bash
+npm install
+```
 ### Steps to Run the Project
 
 1. **Front-end**:
