@@ -12,6 +12,7 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
     
     const [data, setData] = useState<CountryProps>();
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,8 +21,9 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
                 const response = await fetch(`http://localhost:3001/countries/${countrySlug}`)
                 const result = await response.json()
                 setData(result);
-            }catch{
-
+            }catch(err){
+                const error = err as Error;
+                setError(error);
             }finally{
                 setLoading(false);
             }
@@ -46,6 +48,7 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
                         height={300}        
                     />
             </>}
+            {error && <p>{error.message}</p>}
         </main>
     )
 }
