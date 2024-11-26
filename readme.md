@@ -1,35 +1,33 @@
-# Projeto Full-Stack com Next.js
+# Full-Stack Project with Next.js
 
-Este é um projeto full-stack com **Next.js** no front-end e um back-end em Node.js. O front-end e o back-end estão hospedados localmente, com as seguintes URLs:
+This is a full-stack project with **Next.js** on the front-end and a back-end built in Node.js. The front-end and back-end are hosted locally at the following URLs:
 
 - **Front-end**: [http://localhost:3000](http://localhost:3000)
 - **Back-end**: [http://localhost:3001](http://localhost:3001)
 
-## Configuração
+## Configuration
 
-Não há necessidade de configurar um arquivo `.env`, pois todas as rotas e configurações já estão definidas.
+There is no need to set up a `.env` file, as all routes and configurations are already defined.
 
-### Passos para rodar o projeto
+### Steps to Run the Project
 
 1. **Front-end**:
-   - Navegue até a pasta do front-end.
-   - Execute o seguinte comando para iniciar o servidor de desenvolvimento:
+   - Navigate to the front-end folder.
+   - Run the following command to start the development server:
      ```bash
      npm run dev
      ```
 
 2. **Back-end**:
-   - Navegue até a pasta do back-end.
-   - Execute o seguinte comando para iniciar o servidor de desenvolvimento:
+   - Navigate to the back-end folder.
+   - Run the following command to start the development server:
      ```bash
      npm run dev
      ```
 
-Após rodar os dois servidores, o front-end estará disponível em [http://localhost:3000](http://localhost:3000) e o back-end em [http://localhost:3001](http://localhost:3001).
+Once both servers are running, the front-end will be accessible at [http://localhost:3000](http://localhost:3000), and the back-end at [http://localhost:3001](http://localhost:3001).
 
-## Estrutura do Projeto
+## Project Structure
 
-- **Front-end**: Criado com **Next.js**, utilizando componentes para exibição de dados.
-- **Back-end**: API simples com **Node.js** que fornece dados para o front-end.
-
-
+- **Front-end**: Built with **Next.js**, using components to display data.
+- **Back-end**: A simple API built with **Node.js** that provides data for the front-end.
