@@ -29,13 +29,13 @@ function Page({ params }: ParamsPageProps) {
 
     return (
         <main className={styles.country}>
-            {loading ? <div>Carregando dados...</div> : data && 
+            {loading ? <div>loading data...</div> : data && 
             <>
                 <div className={styles.titleWrapper}>
                     <h1>{data?.name}</h1>
-                    <Link href={'/'}>Voltar</Link>
+                    <Link href={'/'}>Back</Link>
                 </div>
-                <p>População: {data?.population}</p>
+                <p>Population: {data?.population}</p>
                 <Image 
                         src={data.flag}      
                         alt={`Flag of ${data.name}`} 

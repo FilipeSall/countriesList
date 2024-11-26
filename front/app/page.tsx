@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <main className={styles.pageContainer}>
-        <h1>Lista de todos os países disponíveis:</h1>    
+        <h1>List of all available countries:</h1>    
         <CountriesContainer />  
     </main>
   );
