@@ -32,5 +32,4 @@ Após rodar os dois servidores, o front-end estará disponível em [http://local
 - **Front-end**: Criado com **Next.js**, utilizando componentes para exibição de dados.
 - **Back-end**: API simples com **Node.js** que fornece dados para o front-end.
 
-Caso tenha algum problema ou precise de mais detalhes, consulte os logs no terminal para maiores informações.
 
