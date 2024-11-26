@@ -37,4 +37,4 @@ Once both servers are running, the front-end will be accessible at [http://local
 ## Project Structure
 
 - **Front-end**: Built with **Next.js**, using components to display data.
-- **Back-end**: A simple API built with **Node.js** that provides data for the front-end.
+- **Back-end**: A simple API built with **Node.js** with **Express** that provides data for the front-end.
