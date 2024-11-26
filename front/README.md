@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full-Stack Project with Next.js
 
-## Getting Started
+This is a full-stack project with **Next.js** on the front-end and a back-end built in Node.js. The front-end and back-end are hosted locally at the following URLs:
 
-First, run the development server:
+- **Front-end**: [http://localhost:3000](http://localhost:3000)
+- **Back-end**: [http://localhost:3001](http://localhost:3001)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Configuration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There is no need to set up a `.env` file, as all routes and configurations are already defined.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Steps to Run the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Install dependencies**:
+   - Navigate to both the front-end and back-end folders, and run the following command in each:
+     ```bash
+     npm install
+     ```
 
-## Learn More
+2. **Run the servers**:
+   - **Front-end**:
+     - Navigate to the front-end folder.
+     - Start the development server:
+       ```bash
+       npm run dev
+       ```
 
-To learn more about Next.js, take a look at the following resources:
+   - **Back-end**:
+     - Navigate to the back-end folder.
+     - Start the development server:
+       ```bash
+       npm run dev
+       ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once both servers are running, the front-end will be accessible at [http://localhost:3000](http://localhost:3000), and the back-end at [http://localhost:3001](http://localhost:3001).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Front-end**: Built with **Next.js**, using components to display data.
+- **Back-end**: A simple API built with **Node.js** that provides data for the front-end.

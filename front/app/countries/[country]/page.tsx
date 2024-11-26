@@ -1,12 +1,15 @@
 "use client";
-import { CountryProps, ParamsPageProps } from '@/app/types';
+import { CountryProps } from '@/app/types';
 import styles from './style.module.css';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Page({ params }: ParamsPageProps) {
+function Page({ params }: { params: Promise<{ country: string }> }) {
 
+    const resolvedParams = use(params);
+    const countrySlug = resolvedParams.country;
+    
     const [data, setData] = useState<CountryProps>();
     const [loading, setLoading] = useState(false);
 
@@ -14,7 +17,7 @@ function Page({ params }: ParamsPageProps) {
         const fetchData = async () => {
             try{
                 setLoading(true)
-                const response = await fetch(`http://localhost:3001/countries/${params.country}`)
+                const response = await fetch(`http://localhost:3001/countries/${countrySlug}`)
                 const result = await response.json()
                 setData(result);
             }catch{
@@ -25,7 +28,7 @@ function Page({ params }: ParamsPageProps) {
         }
 
         fetchData();
-    }, [params.country])
+    }, [countrySlug])
 
     return (
         <main className={styles.country}>
