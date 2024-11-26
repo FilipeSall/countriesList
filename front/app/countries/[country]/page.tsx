@@ -3,7 +3,8 @@ import { CountryProps } from '@/app/types';
 import styles from './style.module.css';
 import { use, useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import BackBtn from '@/components/backBtn/BackBtn';
+
 
 function Page({ params }: { params: Promise<{ country: string }> }) {
 
@@ -38,9 +39,9 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
             <>
                 <div className={styles.titleWrapper}>
                     <h1>{data?.name}</h1>
-                    <Link href={'/'}>Back</Link>
+                    <BackBtn />
                 </div>
-                <p>Population: {data?.population}</p>
+                <p className={styles.popText}>Population: <span>{data?.population}</span></p>
                 <Image 
                         src={data.flag}      
                         alt={`Flag of ${data.name}`} 

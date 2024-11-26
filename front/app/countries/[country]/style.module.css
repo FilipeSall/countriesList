@@ -1,0 +1,13 @@
+.country{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.popText > span {
+    font-weight: bolder;
+}
