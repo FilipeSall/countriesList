@@ -1,11 +1,21 @@
 .navlink{
-    border: 1px solid yellow;
     height: 5vh;
-    width: 5%;
+    width: 7%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     margin: 1rem;
     text-align: center;
+    padding: 4px;
+    background-color: #E54666;
+    border-radius: 4px;
+    box-shadow: 0 2px 0px #EDEEF0;
+    transition: .3s ease-in-out;
+    font-family: var(--montserrat-font), sans-serif;
+}
+
+.navlink:hover{
+    transform: translateY(-2px);
+    transition: .3s ease-in-out;
 }
