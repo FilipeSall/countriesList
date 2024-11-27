@@ -4,7 +4,7 @@ import styles from './style.module.css';
 import { use, useEffect, useState } from 'react';
 import Image from 'next/image';
 import BackBtn from '@/components/backBtn/BackBtn';
-
+import Loading from '@/components/loading/Loading';
 
 function Page({ params }: { params: Promise<{ country: string }> }) {
 
@@ -35,14 +35,14 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
 
     return (
         <main className={styles.country}>
-            {loading ? <div>loading data...</div> : data &&
+            {loading ? <div><Loading /></div> : data &&
                 <>
                     <div className={styles.titleWrapper}>
                         <h1>{data?.name}</h1>
                         <BackBtn />
                     </div>
                     <p className={styles.popText}>Population: <span>{data?.population}</span></p>
-                    {data.flag ? <Image
+                    {data.flag !=='No flag available' ? <Image
                         src={data.flag}
                         alt={`Flag of ${data.name}`}
                         width={500}

@@ -3,4 +3,29 @@
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.searchInput{
+    width: 50%;
+    height: 5vh;
+    margin: 1rem 0 ;
+    background-color: #EDEEF0;
+    color: #111113;
+    border-radius: 4px;
+}
+
+.regionWrappper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.regionContainer{
+    width: 15%;
+}
+
+.regionTitle {
+    text-align: center;
 }
