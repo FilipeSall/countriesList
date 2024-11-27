@@ -2,6 +2,8 @@
 
 This is a full-stack project with **Next.js** on the front-end and a back-end built in Node.js. The front-end and back-end are hosted locally at the following URLs:
 
+> **Note**: The time for this project was a bit short for me, so I managed to implement only basic styling on the front-end. In the `main` branch, the project was delivered by the proposed deadline. However, the `moretime` branch contains improved styles and layout enhancements.
+
 - **Front-end**: [http://localhost:3000](http://localhost:3000)
 - **Back-end**: [http://localhost:3001](http://localhost:3001)
 

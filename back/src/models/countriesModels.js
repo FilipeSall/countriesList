@@ -94,7 +94,7 @@ const fetchCountryFlag = async (country) => {
         );
 
         // Retorna a URL da bandeira ou um valor padrão
-        return flagData ? flagData.flag : 'No flag available';
+        return flagData ? flagData.flag : 'No flag availabe';
     } catch (error) {
         console.error(`Erro ao buscar bandeira para o país ${country}:`, error);
         throw new Error(`Erro ao buscar bandeira para o país ${country}`);
