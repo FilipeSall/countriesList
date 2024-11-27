@@ -10,22 +10,22 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
 
     const resolvedParams = use(params);
     const countrySlug = resolvedParams.country;
-    
+
     const [data, setData] = useState<CountryProps>();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            try{
+            try {
                 setLoading(true)
                 const response = await fetch(`http://localhost:3001/countries/${countrySlug}`)
                 const result = await response.json()
                 setData(result);
-            }catch(err){
+            } catch (err) {
                 const error = err as Error;
                 setError(error);
-            }finally{
+            } finally {
                 setLoading(false);
             }
         }
@@ -35,20 +35,20 @@ function Page({ params }: { params: Promise<{ country: string }> }) {
 
     return (
         <main className={styles.country}>
-            {loading ? <div>loading data...</div> : data && 
-            <>
-                <div className={styles.titleWrapper}>
-                    <h1>{data?.name}</h1>
-                    <BackBtn />
-                </div>
-                <p className={styles.popText}>Population: <span>{data?.population}</span></p>
-                <Image 
-                        src={data.flag}      
-                        alt={`Flag of ${data.name}`} 
-                        width={500}            
-                        height={300}        
-                    />
-            </>}
+            {loading ? <div>loading data...</div> : data &&
+                <>
+                    <div className={styles.titleWrapper}>
+                        <h1>{data?.name}</h1>
+                        <BackBtn />
+                    </div>
+                    <p className={styles.popText}>Population: <span>{data?.population}</span></p>
+                    {data.flag ? <Image
+                        src={data.flag}
+                        alt={`Flag of ${data.name}`}
+                        width={500}
+                        height={300}
+                    /> : <p>Flag unavailable</p>}
+                </>}
             {error && <p>{error.message}</p>}
         </main>
     )

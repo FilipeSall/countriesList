@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');  
 const countriesRoutes = require('./routes'); 
 const cors = require("cors");
+const { fetchCountryData } = require('./models/countriesModels');
 
 dotenv.config();  
 const app = express();

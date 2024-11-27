@@ -7,7 +7,6 @@ const montserrat = Montserrat({
   variable: '--font-montserrat'
 })
 
-
 export const metadata: Metadata = {
   title: "Países do mundo",
   description: "Confira a lista de todos os países do mundo com suas bandeiras e população",
